@@ -1,0 +1,67 @@
+<nav class="section-padding-x bg-dark-base absolute w-full">
+  <div
+    class="flex flex-wrap max-w-screen-lg container items-center justify-between p-3"
+  >
+    <a href="#" class="flex items-center">
+      <img src="/favicon.png" class="w-10" alt="FutureLens Icon" />
+      <span class="font-bold font-poppins normal-font-size text-white-base"
+        >FutureLens</span
+      >
+    </a>
+    <div class="flex md:hidden">
+      <button id="hamburger">
+        <img
+          class="toggle block"
+          src="/icons/menu-squared.png"
+          width="48"
+          height="48"
+        />
+        <img
+          class="toggle hidden"
+          src="/icons/close-window.png"
+          width="48"
+          height="48"
+        />
+      </button>
+    </div>
+    <div
+      class="toggle hidden w-full md:w-auto md:flex text-right text-bold mt-5 md:mt-0 border-t-2 border-blue-dark md:border-none"
+    >
+      <a
+        href="#"
+        class="block md:inline-block text-blue-light hover:text-blue-base px-3 py-3 border-b-2 border-blue-dark md:border-none"
+        >Home
+      </a>
+      <a
+        href="#"
+        class="block md:inline-block text-blue-light hover:text-blue-base px-3 py-3 border-b-2 border-blue-dark md:border-none"
+        >What's New?
+      </a>
+      <a
+        href="#"
+        class="block md:inline-block text-blue-light hover:text-blue-base px-3 py-3 border-b-2 border-blue-dark md:border-none"
+        >About Us
+      </a>
+      <a
+        href="#"
+        class="block md:inline-block text-blue-light hover:text-blue-base px-3 py-3 border-b-2 border-blue-dark md:border-none"
+        >Contact Us
+      </a>
+    </div>
+  </div>
+</nav>
+<script>
+  const hamburger = document.getElementById("hamburger") as HTMLButtonElement;
+
+  hamburger.onclick = function toggleMenu() {
+    const navToggle = document.getElementsByClassName(
+      "toggle"
+    ) as HTMLCollectionOf<HTMLElement>;
+    for (let i = 0; i < navToggle.length; i++) {
+      const item = navToggle.item(i);
+      if (item !== null) {
+        item.classList.toggle("hidden");
+      }
+    }
+  };
+</script>
